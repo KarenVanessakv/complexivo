@@ -1,0 +1,10 @@
+Account;Name;Rep;Manager;Product;Quantity;Price;Status
+714466;Andres Lara;ServiEntrega;Estefano Lara;Camiseta;1;20;entregada
+714466;Juan-Calle;Entregas Flash;Estefano Lara;Taladro;1;150;entregada
+714466;Camila-Bravo;AeroPaquetes;Estefano Lara;Telefono;2;45;pendiente
+737550;Prisila, Raul and Andy;PaquetExpress;Estefano Lara;Resma de Papel;1;3;enviada
+146832;Jhon-Lopez;InstaMensajes;Estefano Lara;PS4;2;500;enviada
+218895;Karla Verdezoto;Entregas Express;Estefano Lara;Avion;2;4;pendiente
+218895;Carlos Morocho;Paquetes En Tiempo;Estefano Lara;Destornillador;1;5;entregada
+412290;Jeremy-Cabrera;PaquetExpress;Estefano Lara;Gorra;2;13;pendiente
+740150;Andres Lara;PaquetExpress;Estefano Lara;Telefono;1;45;enviada
