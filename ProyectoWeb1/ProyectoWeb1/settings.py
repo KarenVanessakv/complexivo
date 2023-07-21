@@ -88,7 +88,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         #"NAME": BASE_DIR / "db.sqlite3",
-        "NAME": os.path.join("tienda", "db.sqlite3"),
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         'USER': 'postgres',
         'PASSWORD': '2580',
         'HOST': '127.0.0.1',
@@ -141,8 +141,15 @@ STATIC_URL = "static/"
 
 # DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Media settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media"),
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# File upload handlers
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.MemoryFileUploadHandler',
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+]
 
 # Configuracion Email
 

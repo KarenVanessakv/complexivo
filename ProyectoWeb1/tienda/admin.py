@@ -6,7 +6,8 @@ class CategoriaProdAdmin(admin.ModelAdmin):
     readonly_fields=("created","update")
 
 class ProductoAdmin(admin.ModelAdmin):
-
+    list_display = ("nombre","categorias","precio","disponibilidad")
+    search_fields = ("nombre","categorias")
     readonly_fields=("created","update")
 
 admin.site.register(CategoriaProd, CategoriaProdAdmin)
