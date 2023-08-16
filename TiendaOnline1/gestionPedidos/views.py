@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from gestionPedidos.models import Articulos
 from django.core.mail import send_mail
 from django.conf import settings
-from gestionPedidos.forms import FormularioContacto
+from gestionPedidos.forms import FormularioContactanos
 
 # Create your views here.
 

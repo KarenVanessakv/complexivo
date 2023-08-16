@@ -17,6 +17,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 
+from django.contrib.messages import constants as mensajes_error
+
 # Build paths inside the project like this: os.path.join(BASE_DIR,...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -47,6 +49,10 @@ INSTALLED_APPS = [
     'contactanos',
     'tienda',
     'carro',
+    'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'pedidos',
 ]
 
 MIDDLEWARE = [
@@ -86,9 +92,9 @@ WSGI_APPLICATION = "ProyectoWeb1.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         #"NAME": BASE_DIR / "db.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "NAME": "ProyectoWeb1",
         'USER': 'postgres',
         'PASSWORD': '2580',
         'HOST': '127.0.0.1',
@@ -143,7 +149,7 @@ STATIC_URL = "static/"
 
 # Media settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join("ProyectoWeb1", "media")
 
 # File upload handlers
 FILE_UPLOAD_HANDLERS = [
@@ -159,3 +165,15 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="vane.200014@gmail.com"
 EMAIL_HOST_PASSWORD="ethy rycs ivgd yaeu"
+
+CRISPY_ALLOWED_TEMPLATE_PACK='bootstrap4'
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+
+MESSAGE_TAGS={
+    mensajes_error.DEBUG: 'debug',
+    mensajes_error.INFO: 'info',
+    mensajes_error.SUCCESS: 'success',
+    mensajes_error.WARNING: 'warning',
+    mensajes_error.ERROR: 'danger',
+}

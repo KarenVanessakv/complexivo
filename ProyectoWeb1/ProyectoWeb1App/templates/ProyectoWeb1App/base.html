@@ -5,7 +5,7 @@
 {% load static %}
 
     <!-- Bootstrap -->
-    <link href="{% static 'ProyectoWeb1App/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'ProyectoWeb1App/vendor/bootstrap/css/bootstrapp.min.css' %}" rel="stylesheet">
 
      <!-- Fonts -->
 
@@ -21,14 +21,27 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
 
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">“Snack ́s Crujientes y Sabrosos”</span>
       </h1>
 
+      <div style="text-align: right; margin-rigth:100px; color: white">
+
+      {% if user.is_authenticated %}
+
+      Hola, {{user.username}} &nbsp;&nbsp;<a href="{% url 'cerrar_sesion'%}" style="color:white;">Cerrar Sesión</a>
+
+      {% else %}
+
+      <a href="{% url 'logear' %}" style="color:white;">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color:white;">Regístrate</a>
+
+      {% endif %}
+
+      </div>
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Gestión de Pedidos</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">“Snack ́s Crujientes y Sabrosos”</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
